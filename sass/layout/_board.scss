@@ -1,0 +1,31 @@
+.page-wrapper {
+	display: flex;
+}
+
+.controls {
+	padding: 5rem;
+}
+
+.board {
+	width: calc(100vh - 4rem);
+	// margin-inline: auto;
+	margin-block: 2rem;
+	background-color: pink;
+
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: repeat(16, 1fr);
+}
+
+.square {
+	width: 100%;
+	aspect-ratio: 1;
+
+	// &:hover {
+	// 	background-color: white;
+	// }
+
+	&.pass1 {
+		background-color: blue;
+	}
+}
