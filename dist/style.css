@@ -90,19 +90,26 @@ select {
 }
 .page-wrapper {
   display: flex;
+  justify-content: flex-start;
 }
 
 .controls {
-  padding: 5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .board {
+  --board-size: 16;
   width: calc(100vh - 4rem);
+  margin-inline: auto;
   margin-block: 2rem;
   background-color: pink;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(var(--board-size), 1fr);
+  grid-template-rows: repeat(var(--board-size), 1fr);
 }
 
 .square {
@@ -111,6 +118,9 @@ select {
 }
 .square.pass1 {
   background-color: blue;
+}
+.square.pass2 {
+  background-color: yellow;
 }
 
 .sr-only {

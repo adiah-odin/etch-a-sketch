@@ -10,6 +10,9 @@
 	// font-families
 	--ff-sans: 'Roboto', sans-serif;
 
+	// Board columns and rows
+	
+
 	// font-sizes from ../abstract/type
 	// Might need to add more breakpoints
 	@each $screen-size, $font-size in a.$type-scale {
