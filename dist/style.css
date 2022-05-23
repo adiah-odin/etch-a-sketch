@@ -91,6 +91,7 @@ select {
 .page-wrapper {
   display: flex;
   justify-content: flex-start;
+  background-color: azure;
 }
 
 .controls {
@@ -106,7 +107,7 @@ select {
   width: calc(100vh - 4rem);
   margin-inline: auto;
   margin-block: 2rem;
-  background-color: pink;
+  border: 2px solid pink;
   display: grid;
   grid-template-columns: repeat(var(--board-size), 1fr);
   grid-template-rows: repeat(var(--board-size), 1fr);
@@ -115,12 +116,37 @@ select {
 .square {
   width: 100%;
   aspect-ratio: 1;
+  background-color: #fff;
 }
 .square.pass1 {
-  background-color: blue;
+  background-color: hsla(0deg, 0%, 0%, 0.1);
 }
 .square.pass2 {
-  background-color: yellow;
+  background-color: hsla(0deg, 0%, 0%, 0.2);
+}
+.square.pass3 {
+  background-color: hsla(0deg, 0%, 0%, 0.3);
+}
+.square.pass4 {
+  background-color: hsla(0deg, 0%, 0%, 0.4);
+}
+.square.pass5 {
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+}
+.square.pass6 {
+  background-color: hsla(0deg, 0%, 0%, 0.6);
+}
+.square.pass7 {
+  background-color: hsla(0deg, 0%, 0%, 0.7);
+}
+.square.pass8 {
+  background-color: hsla(0deg, 0%, 0%, 0.8);
+}
+.square.pass9 {
+  background-color: hsla(0deg, 0%, 0%, 0.9);
+}
+.square.pass10 {
+  background-color: hsl(0deg, 0%, 0%);
 }
 
 .sr-only {

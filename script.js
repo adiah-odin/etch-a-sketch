@@ -21,10 +21,11 @@ function createBoard(size) {
 
 			// create div element and append to board
 			const square = document.createElement('div');
-			square.classList.add('square')
-			square.id = `square-${i},${j}`
+			square.classList.add('square');
+			square.id = `square-${i},${j}`;
+			square.dataset.pass = 0;
 			square.addEventListener('mouseenter', () => {
-				switchColor(event)
+				switchColor(event.target)
 			});
 			board.append(square);
 		}
@@ -32,14 +33,22 @@ function createBoard(size) {
 }
 
 
-function switchColor(e) {
+function switchColor(square) {
 	// console.log(e.target)
 	// console.log('mousePassing');
-	if (!e.target.classList.contains('pass1')) {
-		e.target.classList.add('pass1');
-	} else if (!e.target.classList.contains('pass2')) {
-		e.target.classList.add('pass2');
+	let passNumber = square.dataset.pass
+	if (passNumber < 10) {
+		square.classList.remove(`pass${passNumber}`);
+		square.dataset.pass++;
+		square.classList.add(`pass${square.dataset.pass}`)
+
 	}
+
+	// if (!e.target.classList.contains('pass1')) {
+	// 	e.target.classList.add('pass1');
+	// } else if (!e.target.classList.contains('pass2')) {
+	// 	e.target.classList.add('pass2');
+	// }
 }
 
 function resetColors() {

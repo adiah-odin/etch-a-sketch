@@ -1,6 +1,7 @@
 .page-wrapper {
 	display: flex;
 	justify-content: flex-start;
+	background-color: azure;
 }
 
 .controls {
@@ -18,7 +19,8 @@
 	width: calc(100vh - 4rem);
 	margin-inline: auto;
 	margin-block: 2rem;
-	background-color: pink;
+	border: 2px solid pink;
+	// background-color: pink;
 
 	display: grid;
 	grid-template-columns: repeat(var(--board-size), 1fr);
@@ -28,16 +30,20 @@
 .square {
 	width: 100%;
 	aspect-ratio: 1;
+	background-color: #fff;
 
 	// &:hover {
 	// 	background-color: white;
 	// }
 
-	&.pass1 {
-		background-color: blue;
-	}
-
-	&.pass2 {
-		background-color: yellow;
-	}
+	&.pass1 { background-color: hsla(0, 0%, 0%, 0.1); }
+	&.pass2 { background-color: hsl(0, 0%, 0%, 0.2); }
+	&.pass3 { background-color: hsl(0, 0%, 0%, 0.3); }
+	&.pass4 { background-color: hsl(0, 0%, 0%, 0.4); }
+	&.pass5 { background-color: hsl(0, 0%, 0%, 0.5); }
+	&.pass6 { background-color: hsl(0, 0%, 0%, 0.6); }
+	&.pass7 { background-color: hsl(0, 0%, 0%, 0.7); }
+	&.pass8 { background-color: hsl(0, 0%, 0%, 0.8); }
+	&.pass9 { background-color: hsl(0, 0%, 0%, 0.9); }
+	&.pass10 { background-color: hsl(0, 0%, 0%); }
 }
